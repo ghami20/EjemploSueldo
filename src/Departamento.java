@@ -1,11 +1,11 @@
 
 public class Departamento {
 	private String nombre;
-	//private Empresa empresa;
+	private Empresa empresa;
 	private int bono;
 	private String sector;
-	public Departamento(String nombre, int bono, String sector) {
-		super();
+	public Departamento(String nombre, int bono, String sector,Empresa empresa) {
+		this.empresa = empresa;
 		this.nombre = nombre;
 		this.bono = bono;
 		this.sector = sector;
@@ -28,8 +28,17 @@ public class Departamento {
 	public void setSector(String sector) {
 		this.sector = sector;
 	}
+	
+	public Empresa getEmpresa() {
+		return empresa;
+	}
+	public void setEmpresa(Empresa empresa) {
+		this.empresa = empresa;
+	}
 	@Override
 	public String toString() {
-		return "Departamento [nombre=" + nombre + ", bono=" + bono + ", sector=" + sector + "]";
+		return "Departamento [nombre=" + nombre + ", empresa=" + empresa + ", bono=" + bono + ", sector=" + sector
+				+ "]";
 	}
+	
 }
